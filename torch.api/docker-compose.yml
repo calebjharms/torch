@@ -1,0 +1,16 @@
+﻿version: "3.8"
+
+services:
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "SqlLocalPass382"
+      ACCEPT_EULA: "Y"
+  azure_storage_emulator:
+    image: mcr.microsoft.com/azure-storage/azurite
+    restart: always
+    ports:
+      - "10000:10000"
+      - "10001:10001"

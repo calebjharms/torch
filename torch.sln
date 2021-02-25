@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "torch.api", "torch.api\torch.api.csproj", "{2E396F9E-68D1-4048-9D2A-76E75C1B3EF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "torch.database", "torch.database\torch.database.csproj", "{46B77223-2196-4067-AB88-747DCF2ECC78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E396F9E-68D1-4048-9D2A-76E75C1B3EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E396F9E-68D1-4048-9D2A-76E75C1B3EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E396F9E-68D1-4048-9D2A-76E75C1B3EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E396F9E-68D1-4048-9D2A-76E75C1B3EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B77223-2196-4067-AB88-747DCF2ECC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B77223-2196-4067-AB88-747DCF2ECC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B77223-2196-4067-AB88-747DCF2ECC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B77223-2196-4067-AB88-747DCF2ECC78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34793E77-D9E7-4B6E-AB96-2F3178C3485F}
+	EndGlobalSection
+EndGlobal
