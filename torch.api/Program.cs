@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using torch.database.Models;
 using Microsoft.Extensions.DependencyInjection;
+ 
 
 
 
@@ -34,7 +35,7 @@ namespace torch.api
                 try
                 {
                     var context = services.GetRequiredService<TorchContext>();
-                    context.Database.EnsureCreated();
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

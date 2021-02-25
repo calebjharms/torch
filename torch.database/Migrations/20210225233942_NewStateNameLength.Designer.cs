@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using torch.database.Models;
 
 namespace torch.database.Migrations
 {
     [DbContext(typeof(TorchContext))]
-    partial class TorchContextModelSnapshot : ModelSnapshot
+    [Migration("20210225233942_NewStateNameLength")]
+    partial class NewStateNameLength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -13,6 +13,8 @@ namespace torch.database.Models
 
         public DbSet<Organization> Organizations { get; set; }
 
+        public DbSet<State> States { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Organization>(e =>
