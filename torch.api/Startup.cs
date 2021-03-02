@@ -13,7 +13,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using torch.database.Models;
 using Microsoft.EntityFrameworkCore;
-
+using torch.services.Interfaces;
+using torch.services.Services;
 
 
 namespace torch.api
@@ -42,6 +43,9 @@ namespace torch.api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "torch.api", Version = "v1" });
             });
+
+            services.AddScoped<IOrganizationService, OrganizationService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

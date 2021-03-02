@@ -49,7 +49,7 @@ namespace torch.database.Models
 
 
         [ForeignKey("state")]
-        public int stateId { get; set; }
+        public int? stateId { get; set; }
 
         public virtual State state { get; set; }
 
