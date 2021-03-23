@@ -21,8 +21,15 @@ namespace torch.api.Controllers
             _organization = organization;
         }
 
+        [HttpGet("all")]
+        public List<OrganizationDetail> Get()
+        {
+            List<OrganizationDetail> a = _organization.GetOrganizations();
 
-        [HttpGet]
+            return a;
+        }
+
+        [HttpGet("{id}")]
         public OrganizationDetail Get(Guid id)
         {
             OrganizationDetail a = _organization.GetOrganization(id);

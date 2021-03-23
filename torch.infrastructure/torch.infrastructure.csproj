@@ -6,5 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Organizations\" />
+    <Folder Include="States\" />
   </ItemGroup>
 </Project>

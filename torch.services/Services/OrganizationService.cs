@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Logging;
 using torch.database.Models;
@@ -27,11 +28,17 @@ namespace torch.services.Services
 
             newOrganization.email = organization.email;
 
+            newOrganization.phone = organization.phone;
+
             newOrganization.address = organization.address;
 
             newOrganization.address2 = organization.address2;
 
+            newOrganization.city = organization.city;
+
             newOrganization.stateId = organization.stateId;
+
+            newOrganization.zip = organization.zip;
 
             _context.Organizations.Add(newOrganization);
 
@@ -56,16 +63,47 @@ namespace torch.services.Services
 
                 organizationDetail.email = organization.email;
 
+                organizationDetail.phone = organization.phone;
+
                 organizationDetail.address = organization.address;
 
                 organizationDetail.address2 = organization.address2;
 
+                organizationDetail.city = organization.city;
+
                 organizationDetail.stateId = organization.stateId;
+
+                organizationDetail.zip = organization.zip;
 
                 return organizationDetail;
             }
 
             throw new Exception($"ID {id} does not exist in database");
+
+        }
+
+        public List<OrganizationDetail> GetOrganizations()
+        {
+            List<Organization> c = _context.Organizations.ToList();
+
+            List<OrganizationDetail> x = new List<OrganizationDetail>();
+
+            foreach (Organization d in c )
+            {
+                OrganizationDetail josh = new OrganizationDetail();
+
+                josh.id = d.id;
+
+                josh.name = d.name;
+
+                josh.email = d.email;
+
+                josh.active = d.active;
+
+                x.Add(josh);
+            }
+
+            return x;
 
         }
     }

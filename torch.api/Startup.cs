@@ -37,14 +37,18 @@ namespace torch.api
             );
 
 
+            services.AddCors();
+
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "torch.api", Version = "v1" });
-            });
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "torch.api", Version = "v1" });
+            //});
 
             services.AddScoped<IOrganizationService, OrganizationService>();
+
+            services.AddScoped<IStateService, StateService>();
 
         }
 
@@ -54,9 +58,12 @@ namespace torch.api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "torch.api v1"));
+                //app.UseSwagger();
+                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "torch.api v1"));
             }
+             app.UseCors(
+                    options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+                    );
 
             app.UseHttpsRedirection();
 

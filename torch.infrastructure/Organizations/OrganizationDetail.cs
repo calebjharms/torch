@@ -11,10 +11,16 @@ namespace torch.infrastructure.Organizations
 
         public string email { get; set; }
 
+        public string phone { get; set; }
+
         public string address { get; set; }
 
         public string address2 { get; set; }
 
+        public string city { get; set; }
+
         public int? stateId { get; set; }
+
+        public string zip { get; set; }
     }
 }
